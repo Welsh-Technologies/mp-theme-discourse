@@ -1,41 +1,286 @@
-$mp-bg: #f5f1e8;
-$mp-text: #1d1d1b;
-$mp-accent: #a48348;
-$mp-muted: #8d887f;
+//
+// Musica Pristina — Input Panel
+// Discourse Theme
+//
+
+// ---------------------------------------------------------
+// Brand palette
+// ---------------------------------------------------------
+
+$mp-ink: #1a1a1a;
+$mp-silent-white: #faf8f4;
+$mp-copper: #a56a43;
+$mp-copper-dark: #78482e;
+$mp-copper-light: #f1e3d8;
+
+$mp-archive-green: #5e675a;
+$mp-green-dark: #41483e;
+$mp-green-light: #e5e9e2;
+
+$mp-listening-gray: #8b8b8b;
+$mp-soft-ink: #45433f;
+
+$mp-paper: #f3efe8;
+$mp-stone: #ded8ce;
+$mp-line: #d7d1c8;
+
+$mp-danger: #8b3f36;
+
+
+// ---------------------------------------------------------
+// Typography
+// ---------------------------------------------------------
+
+// ---------------------------------------------------------
+// Fonts
+// ---------------------------------------------------------
+
+@font-face {
+  font-family: "Inter";
+  src: url($inter-variable) format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url($inter-italic-variable) format("truetype");
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url($source-serif-variable) format("truetype");
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url($source-serif-italic-variable) format("truetype");
+  font-style: italic;
+  font-weight: 200 900;
+  font-display: swap;
+}
+
+$mp-font-serif:
+  "Source Serif 4",
+  Georgia,
+  "Times New Roman",
+  serif;
+
+$mp-font-sans:
+  "Inter",
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  sans-serif;
+
+
+// ---------------------------------------------------------
+// Foundation
+// ---------------------------------------------------------
 
 html,
 body {
-  background: $mp-bg;
-  color: $mp-text;
+  background: $mp-silent-white;
+  color: $mp-ink;
 }
 
 body {
-  font-family: $font-sans;
+  font-family: $mp-font-serif;
+  line-height: 1.6;
 }
+
+
+// ---------------------------------------------------------
+// Typography hierarchy
+// ---------------------------------------------------------
 
 h1,
 h2,
 h3,
+h4,
+h5,
+h6,
+.title,
 .topic-title {
-  font-family: $font-serif;
+  font-family: $mp-font-sans;
+  color: $mp-ink;
 }
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  line-height: 1.24;
+}
+
+
+// ---------------------------------------------------------
+// Links
+// ---------------------------------------------------------
 
 a {
-  color: $mp-accent;
+  color: $mp-copper-dark;
+
+  &:hover {
+    color: $mp-ink;
+  }
 }
 
+
+// ---------------------------------------------------------
+// Header
+// ---------------------------------------------------------
+
 .d-header {
-  background: $mp-bg;
+  background: $mp-silent-white;
+  border-bottom: 1px solid $mp-line;
   box-shadow: none;
-  border-bottom: 1px solid rgba($mp-text, 0.12);
+}
+
+.d-header .header-buttons {
+  font-family: $mp-font-sans;
+}
+
+
+// ---------------------------------------------------------
+// Navigation / application chrome
+// ---------------------------------------------------------
+
+.sidebar-wrapper,
+.sidebar-section,
+.menu-panel {
+  font-family: $mp-font-sans;
+}
+
+.sidebar-section-link-wrapper {
+
+  .sidebar-section-link {
+    border-radius: 0;
+
+    &:hover {
+      background: $mp-paper;
+    }
+
+    &.active {
+      color: $mp-green-dark;
+      background: $mp-green-light;
+    }
+  }
+}
+
+
+// ---------------------------------------------------------
+// Buttons
+// ---------------------------------------------------------
+
+.btn {
+  font-family: $mp-font-sans;
+  font-weight: 600;
+  border-radius: 0;
+  box-shadow: none;
+  transition: all 160ms ease;
 }
 
 .btn-primary {
-  background: $mp-text;
-  color: $mp-bg;
+  background: $mp-ink;
+  border-color: $mp-ink;
+  color: $mp-silent-white;
+
+  &:hover,
+  &:focus {
+    background: $mp-copper-dark;
+    border-color: $mp-copper-dark;
+  }
+}
+
+
+// ---------------------------------------------------------
+// Forms
+// ---------------------------------------------------------
+
+input,
+textarea,
+select {
+  font-family: $mp-font-sans;
+  color: $mp-ink;
+  background: $mp-silent-white;
+  border-color: $mp-line;
   border-radius: 0;
 
-  &:hover {
-    background: $mp-accent;
+  &:focus {
+    border-color: $mp-copper;
+    box-shadow: 0 0 0 0.2rem rgba(165, 106, 67, 0.18);
   }
+}
+
+
+// ---------------------------------------------------------
+// Topic lists
+// ---------------------------------------------------------
+
+.topic-list {
+  border-color: $mp-line;
+}
+
+.topic-list-item {
+  border-color: $mp-line;
+
+  &:hover {
+    background: rgba(165, 106, 67, 0.045);
+  }
+}
+
+.topic-list .main-link a.title {
+  color: $mp-ink;
+
+  &:hover {
+    color: $mp-copper-dark;
+  }
+}
+
+
+// ---------------------------------------------------------
+// Posts
+// ---------------------------------------------------------
+
+.topic-post {
+  border-color: $mp-line;
+}
+
+.topic-body {
+  color: $mp-ink;
+}
+
+.topic-meta-data,
+.post-info {
+  font-family: $mp-font-sans;
+  color: $mp-listening-gray;
+}
+
+
+// ---------------------------------------------------------
+// Composer
+// ---------------------------------------------------------
+
+#reply-control {
+  background: $mp-silent-white;
+  border-top: 1px solid $mp-line;
+  box-shadow: 0 -8px 28px rgba(26, 26, 26, 0.05);
+}
+
+
+// ---------------------------------------------------------
+// Selection
+// ---------------------------------------------------------
+
+::selection {
+  background: $mp-copper-light;
+  color: $mp-ink;
 }

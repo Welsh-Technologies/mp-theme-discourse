@@ -1,0 +1,11 @@
+{
+  "name": "Musica Pristina Input Panel",
+  "about_url": "https://musicapristina.com",
+  "assets": {
+    "inter-variable": "assets/Inter-VariableFont_opsz,wght.ttf",
+    "inter-italic-variable": "assets/Inter-Italic-VariableFont_opsz,wght.ttf",
+    "source-serif-variable": "assets/SourceSerif4-VariableFont_opsz,wght.ttf",
+    "source-serif-italic-variable": "assets/SourceSerif4-Italic-VariableFont_opsz,wght.ttf"
+  },
+  "color_schemes": {}
+}
