@@ -1,0 +1,41 @@
+$mp-bg: #f5f1e8;
+$mp-text: #1d1d1b;
+$mp-accent: #a48348;
+$mp-muted: #8d887f;
+
+html,
+body {
+  background: $mp-bg;
+  color: $mp-text;
+}
+
+body {
+  font-family: $font-sans;
+}
+
+h1,
+h2,
+h3,
+.topic-title {
+  font-family: $font-serif;
+}
+
+a {
+  color: $mp-accent;
+}
+
+.d-header {
+  background: $mp-bg;
+  box-shadow: none;
+  border-bottom: 1px solid rgba($mp-text, 0.12);
+}
+
+.btn-primary {
+  background: $mp-text;
+  color: $mp-bg;
+  border-radius: 0;
+
+  &:hover {
+    background: $mp-accent;
+  }
+}
