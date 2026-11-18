@@ -7,5 +7,18 @@
     "source-serif-variable": "assets/SourceSerif4-VariableFont_opsz,wght.ttf",
     "source-serif-italic-variable": "assets/SourceSerif4-Italic-VariableFont_opsz,wght.ttf"
   },
-  "color_schemes": {}
+  "color_schemes": {
+    "Musica Pristina": {
+      "primary": "1A1A1A",
+      "secondary": "FAF8F4",
+      "tertiary": "78482E",
+      "quaternary": "A56A43",
+      "header_background": "FAF8F4",
+      "header_primary": "1A1A1A",
+      "highlight": "F1E3D8",
+      "danger": "8B3F36",
+      "success": "5E675A",
+      "love": "A56A43"
+    }
+  }
 }
