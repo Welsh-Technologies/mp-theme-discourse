@@ -26,7 +26,6 @@ $mp-line: #d7d1c8;
 
 $mp-danger: #8b3f36;
 
-
 // ---------------------------------------------------------
 // Typography
 // ---------------------------------------------------------
@@ -67,11 +66,7 @@ $mp-danger: #8b3f36;
   font-display: swap;
 }
 
-$mp-font-serif:
-  "Source Serif 4",
-  Georgia,
-  "Times New Roman",
-  serif;
+$mp-font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
 
 $mp-font-sans:
   "Inter",
@@ -80,6 +75,21 @@ $mp-font-sans:
   "Segoe UI",
   sans-serif;
 
+// ---------------------------------------------------------
+// Discourse typography
+// ---------------------------------------------------------
+
+:root {
+  --font-family:
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --heading-font-family:
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.topic-post .cooked {
+  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+}
 
 // ---------------------------------------------------------
 // Foundation
@@ -95,7 +105,6 @@ body {
   font-family: $mp-font-serif;
   line-height: 1.6;
 }
-
 
 // ---------------------------------------------------------
 // Typography hierarchy
@@ -120,7 +129,6 @@ h3 {
   line-height: 1.24;
 }
 
-
 // ---------------------------------------------------------
 // Links
 // ---------------------------------------------------------
@@ -132,7 +140,6 @@ a {
     color: $mp-ink;
   }
 }
-
 
 // ---------------------------------------------------------
 // Header
@@ -148,7 +155,6 @@ a {
   font-family: $mp-font-sans;
 }
 
-
 // ---------------------------------------------------------
 // Navigation / application chrome
 // ---------------------------------------------------------
@@ -160,7 +166,6 @@ a {
 }
 
 .sidebar-section-link-wrapper {
-
   .sidebar-section-link {
     border-radius: 0;
 
@@ -174,7 +179,6 @@ a {
     }
   }
 }
-
 
 // ---------------------------------------------------------
 // Buttons
@@ -200,7 +204,6 @@ a {
   }
 }
 
-
 // ---------------------------------------------------------
 // Forms
 // ---------------------------------------------------------
@@ -219,7 +222,6 @@ select {
     box-shadow: 0 0 0 0.2rem rgba(165, 106, 67, 0.18);
   }
 }
-
 
 // ---------------------------------------------------------
 // Topic lists
@@ -245,7 +247,6 @@ select {
   }
 }
 
-
 // ---------------------------------------------------------
 // Posts
 // ---------------------------------------------------------
@@ -264,7 +265,6 @@ select {
   color: $mp-listening-gray;
 }
 
-
 // ---------------------------------------------------------
 // Composer
 // ---------------------------------------------------------
@@ -274,7 +274,6 @@ select {
   border-top: 1px solid $mp-line;
   box-shadow: 0 -8px 28px rgba(26, 26, 26, 0.05);
 }
-
 
 // ---------------------------------------------------------
 // Selection
